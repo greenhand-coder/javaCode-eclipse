@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #FFE4E1;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainUIController">
+   <left>
+      <HBox id="hbox" prefHeight="525.0" prefWidth="300.0" style="-fx-background-color: PINK;" BorderPane.alignment="CENTER">
+         <children>
+            <TreeView id="treeView" fx:id="treeview" prefHeight="525.0" prefWidth="300.0" style="-fx-border-color: PINK;" />
+         </children>
+      </HBox>
+   </left>
+   <right>
+      <ScrollPane id="scrollPane" prefHeight="525.0" prefWidth="700.0" style="-fx-background-color: PINK;" BorderPane.alignment="CENTER">
+         <content>
+            <FlowPane fx:id="flowPane" prefHeight="525.0" prefWidth="710.0" style="-fx-background-color: #FFF0F5;" />
+         </content>
+      </ScrollPane>
+   </right>
+   <top>
+      <ToolBar id="toolBar" fx:id="toolBar" prefHeight="52.0" prefWidth="1000.0" style="-fx-background-color: #FFE4E1; -fx-border-color: pink;" BorderPane.alignment="CENTER">
+        <items>
+          <Button id="open_btn" fx:id="openBtn" mnemonicParsing="false" onAction="#openBtnAction" prefHeight="25.0" prefWidth="0.0" style="-fx-background-color: #ffe4e1;">
+               <graphic>
+                  <ImageView fitHeight="37.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/open.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button id="copy_btn" fx:id="copyBtn" mnemonicParsing="false" onAction="#copyBtnAction" prefHeight="48.0" prefWidth="67.0" style="-fx-background-color: #ffe4e1;">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/copy.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button id="paste_btn" fx:id="pasteBtn" mnemonicParsing="false" onAction="#pasteBtnAction" prefHeight="51.0" prefWidth="67.0" style="-fx-background-color: #ffe4e1;">
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/paste.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button id="delete_btn" fx:id="deleteBtn" mnemonicParsing="false" onAction="#deleteBtnAction" prefHeight="59.0" prefWidth="45.0" style="-fx-background-color: #ffe4e1;">
+               <graphic>
+                  <ImageView fitHeight="52.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/delet.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button id="rename_Btn" fx:id="renameBtn" mnemonicParsing="false" onAction="#renameBtnAction" prefHeight="25.0" prefWidth="7.0" style="-fx-background-color: #ffe4e1;">
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/rename.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="PPT" mnemonicParsing="false" onAction="#PPTAction" opacity="0.0" text="幻灯片">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="1.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic></Button>
+        </items>
+      </ToolBar>
+   </top>
+   <bottom>
+      <HBox prefHeight="23.0" prefWidth="1000.0" style="-fx-border-color: pink;" BorderPane.alignment="CENTER">
+         <children>
+            <Text id="text1" fx:id="text1" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="431.30029296875">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text id="text2" fx:id="text2" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="569.30029296875">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

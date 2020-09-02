@@ -1,0 +1,23 @@
+[C:\Users\admin\Documents\java\finalExp\rmi] Result
+Files detail
++rmi
+    +CORBA
+        -ClassDesc.java                          Total:        48, Blank:       4,        685Bytes
+        -GetORBPropertiesFileAction.java         Total:       108, Blank:      18,        2660Bytes
+        -PortableRemoteObjectDelegate.java       Total:        84, Blank:       9,        1929Bytes
+        -Stub.java                               Total:       261, Blank:      43,        7679Bytes
+        -StubDelegate.java                       Total:        93, Blank:      10,        2169Bytes
+        -Tie.java                                Total:        85, Blank:       9,        1726Bytes
+        -Util.java                               Total:       421, Blank:      55,        13813Bytes
+        -UtilDelegate.java                       Total:       135, Blank:      19,        3070Bytes
+        -ValueHandler.java                       Total:        96, Blank:       9,        2816Bytes
+        -ValueHandlerMultiFormat.java            Total:        70, Blank:       4,        1970Bytes
+    +ssl
+        -SslRMIClientSocketFactory.java          Total:       212, Blank:      10,        8013Bytes
+        -SslRMIServerSocketFactory.java          Total:       378, Blank:      22,        14735Bytes
+    -PortableRemoteObject.java               Total:       293, Blank:      42,        9411Bytes
+Total:
+      13 Java文件数
+     254 空白行数
+    2284 总行数
+   70676 文件总大小

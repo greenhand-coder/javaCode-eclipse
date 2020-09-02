@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="849.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MyController">
+   <children>
+      <Button fx:id="btn_1" layoutX="364.0" layoutY="235.0" mnemonicParsing="false" onAction="#eventButton" prefHeight="44.0" prefWidth="94.0" text="点我" textAlignment="JUSTIFY">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <TextField fx:id="text_1" layoutX="186.0" layoutY="116.0" prefHeight="91.0" prefWidth="449.0" promptText="请输入">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </TextField>
+      <ToolBar layoutX="97.0" layoutY="44.0" prefHeight="40.0" prefWidth="200.0">
+        <items>
+          <Button mnemonicParsing="false" text="Button" />
+            <Button mnemonicParsing="false" text="Button" />
+            <Button mnemonicParsing="false" text="Button" />
+        </items>
+      </ToolBar>
+      <Button fx:id="btn_11" layoutX="168.0" layoutY="248.0" mnemonicParsing="false" onAction="#eventButton" prefHeight="44.0" prefWidth="94.0" text="点我" textAlignment="JUSTIFY">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_12" layoutX="282.0" layoutY="323.0" mnemonicParsing="false" onAction="#eventButton" prefHeight="44.0" prefWidth="94.0" text="点我" textAlignment="JUSTIFY">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

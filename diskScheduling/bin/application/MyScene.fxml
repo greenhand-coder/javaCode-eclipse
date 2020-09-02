@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="736.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MySceneController">
+   <children>
+      <GridPane layoutX="-1.0" layoutY="-3.0" prefHeight="583.0" prefWidth="736.0" style="-fx-border-color: #2F4F4F;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane GridPane.rowIndex="2">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="93.0" minHeight="10.0" prefHeight="92.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="129.0" minHeight="10.0" prefHeight="85.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="startLOOK" mnemonicParsing="false" onAction="#startLOOKAction" prefHeight="134.0" prefWidth="184.0" style="-fx-background-color: #D3D3D3;" text="LOOK" />
+                  <Button fx:id="startCSCAN" mnemonicParsing="false" onAction="#startCSCANAction" prefHeight="117.0" prefWidth="184.0" style="-fx-background-color: #FFF;" text="C-SCAN" GridPane.columnIndex="1" />
+                  <Button fx:id="startSSFT" mnemonicParsing="false" onAction="#startSSFTAction" prefHeight="176.0" prefWidth="184.0" style="-fx-background-color: #FFF;" text="SSTF" GridPane.rowIndex="1" />
+                  <Button fx:id="startFCFS" mnemonicParsing="false" onAction="#startFCFSAction" prefHeight="102.0" prefWidth="191.0" style="-fx-background-color: #D3D3D3;" text="FCFS" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="1.0" layoutY="-3.0" prefHeight="34.0" prefWidth="56.0" text="寻道数：" />
+                        <Button fx:id="refresh" layoutY="129.0" mnemonicParsing="false" onAction="#refreshAction" prefHeight="65.0" prefWidth="368.0" style="-fx-background-color: #FAFAD2;" text="清除数据" />
+                        <GridPane layoutY="23.0" prefHeight="107.0" prefWidth="367.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <TextField fx:id="ssftTextField" prefHeight="73.0" prefWidth="238.0" promptText="SSTF" style="-fx-border-color: #FFF; -fx-background-color: #F8F8FF;" GridPane.rowIndex="1" />
+                              <TextField fx:id="cscanTextField" prefHeight="65.0" prefWidth="214.0" promptText="C-SCAN" style="-fx-border-color: #FFF; -fx-background-color: #F8F8FF;" GridPane.columnIndex="1" />
+                              <TextField fx:id="fcfsTextField" prefHeight="77.0" prefWidth="183.0" promptText="FCFS" style="-fx-border-color: #FFF; -fx-background-color: #E6E6FA;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="lookTextField" prefHeight="69.0" prefWidth="211.0" promptText="LOOK" style="-fx-border-color: #FFF; -fx-background-color: #E6E6FA;" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+            <LineChart fx:id="lookChart" prefHeight="475.0" prefWidth="499.0" style="-fx-background-color: #FFE4E1;" title="LOOK">
+               <opaqueInsets>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </opaqueInsets>
+               <xAxis>
+                  <NumberAxis prefHeight="19.0" prefWidth="519.0" side="BOTTOM" tickLabelFill="LIGHTSKYBLUE" upperBound="400.0" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis prefHeight="221.0" prefWidth="34.0" side="LEFT" upperBound="1300.0" />
+               </yAxis>
+            </LineChart>
+            <LineChart fx:id="cscanChart" prefHeight="475.0" prefWidth="499.0" style="-fx-background-color: #F0F8FF;" title="C-SCAN" GridPane.columnIndex="1">
+               <opaqueInsets>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </opaqueInsets>
+               <xAxis>
+                  <NumberAxis prefHeight="19.0" prefWidth="519.0" side="BOTTOM" tickLabelFill="#ccb6b6" upperBound="400.0" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis prefHeight="221.0" prefWidth="34.0" side="LEFT" upperBound="1300.0" />
+               </yAxis>
+            </LineChart>
+            <LineChart fx:id="fcfsChart" prefHeight="475.0" prefWidth="499.0" style="-fx-background-color: #FFE4E1;" title="FCFS" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <opaqueInsets>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </opaqueInsets>
+               <xAxis>
+                  <NumberAxis prefHeight="19.0" prefWidth="519.0" side="BOTTOM" tickLabelFill="LIGHTSKYBLUE" upperBound="400.0" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis prefHeight="221.0" prefWidth="34.0" side="LEFT" upperBound="1300.0" />
+               </yAxis>
+            </LineChart>
+            <LineChart fx:id="ssftChart" prefHeight="475.0" prefWidth="499.0" style="-fx-background-color: #F0F8FF;" title="SSFT" GridPane.rowIndex="1">
+               <opaqueInsets>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </opaqueInsets>
+               <xAxis>
+                  <NumberAxis prefHeight="19.0" prefWidth="519.0" side="BOTTOM" tickLabelFill="#ccb4b4" upperBound="400.0" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis prefHeight="221.0" prefWidth="34.0" side="LEFT" upperBound="1300.0" />
+               </yAxis>
+            </LineChart>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

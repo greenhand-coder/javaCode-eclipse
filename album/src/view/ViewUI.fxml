@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane style="-fx-background-color: #FFE4E1;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewUIController">
+   <children>
+      <StackPane alignment="BOTTOM_CENTER" prefHeight="784.0" prefWidth="1000.0" style="-fx-background-color: #FFE4E1;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <BorderPane layoutY="-16.0" onMousePressed="#toolBarShowHide" prefHeight="784.0" prefWidth="1000.0" style="-fx-background-color: #fff0f5;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <center>
+                  <ImageView fx:id="imageView" disable="true" fitHeight="521.0" fitWidth="646.0" pickOnBounds="true" preserveRatio="true" />
+               </center>
+               <left>
+                  <Button fx:id="forwardImageBtn" contentDisplay="CENTER" mnemonicParsing="false" onAction="#forwardAction" prefHeight="30.0" prefWidth="67.0" style="-fx-background-color: #FFE4E1;" textFill="WHITE" BorderPane.alignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="69.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/turnleft.png" />
+                           </image></ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Button>
+               </left>
+               <right>
+                  <Button fx:id="nextImageBtn" contentDisplay="CENTER" mnemonicParsing="false" onAction="#nextAction" style="-fx-background-color: #ffe4e1;" textFill="WHITE" BorderPane.alignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="66.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/turnright.png" />
+                           </image></ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Button>
+               </right>
+               <top>
+                  <HBox prefHeight="64.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#Back" style="-fx-background-color: #FFF0F5;" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="57.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../icons/back.png" />
+                                 </image></ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+               </top>
+               <bottom>
+                  <ToolBar fx:id="toolbar" prefWidth="1000.0" style="-fx-background-color: #FFE4E1; -fx-border-color: PINK;" BorderPane.alignment="CENTER">
+                    <items>
+                        <HBox alignment="CENTER" prefHeight="70.0" prefWidth="980.0" spacing="20.0" style="-fx-background-color: #FFE4E1;">
+                           <children>
+                              <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#SildeShowAction" style="-fx-background-color: #FFE4E1;" textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../icons/ppt.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></Button>
+                              <Button fx:id="filterBtn" contentDisplay="CENTER" mnemonicParsing="false" onAction="#filterAction" prefHeight="58.0" prefWidth="82.0" style="-fx-background-color: #FFE4E1;" textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fitHeight="71.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../icons/beautify.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="rotateBtn" contentDisplay="CENTER" mnemonicParsing="false" onAction="#rotateAction" style="-fx-background-color: #FFE4E1;" textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fitHeight="53.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../icons/rotate.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="DaozhiBtn" contentDisplay="CENTER" mnemonicParsing="false" onAction="#invert" style="-fx-background-color: #FFE4E1;" textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../icons/invert.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                            <Button fx:id="enlargeBtn" contentDisplay="CENTER" mnemonicParsing="false" onAction="#enlargeAction" prefHeight="81.0" prefWidth="80.0" style="-fx-background-color: #FFE4E1;" textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../icons/enlarge.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="smallBtn" contentDisplay="CENTER" mnemonicParsing="false" onAction="#smallAction" prefHeight="82.0" prefWidth="78.0" style="-fx-background-color: #FFE4E1;" textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fitHeight="67.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../icons/shrink.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
+                    </items>
+                  </ToolBar>
+               </bottom>
+            </BorderPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>
